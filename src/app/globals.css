@@ -122,6 +122,16 @@ body { background: #0a0a0a; color: #ffffff; }
   background-size: 60px 60px;
 }
 
+/* Blueprint grid — plano de arquitecto */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(59,130,246,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.08) 1px, transparent 1px),
+    linear-gradient(rgba(59,130,246,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.15) 1px, transparent 1px);
+  background-size: 30px 30px, 30px 30px, 150px 150px, 150px 150px;
+}
+
 /* Line pattern */
 .line-pattern {
   background-image:

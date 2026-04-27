@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { waLink, siteConfig } from '@/lib/data';
 import Spline from '@splinetool/react-spline';
 
-const textCycle = ['Cocinas', 'Baños', 'Electricidad', 'Fontanería', 'Pisos', 'Pintura'];
+const textCycle = ['Cocina', 'Baño', 'Electricidad', 'Fontanería', 'Piso', 'Pintura'];
 
 function ParticleField() {
   const particles = Array.from({ length: 30 }, (_, i) => ({
@@ -73,7 +73,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-dark" />
-      <div className="absolute inset-0 grid-pattern opacity-50" />
+      <div className="absolute inset-0 blueprint-grid opacity-25" />
       <ParticleField />
       <GradientOrbs />
 
@@ -99,7 +99,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] mb-6"
             >
-              Transforma tus<br />
+              Transforma tu<br />
               <span className="relative inline-block">
                 <span
                   key={wordIndex}
@@ -112,7 +112,7 @@ export default function HeroSection() {
                 </span>
                 <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-brand to-gold rounded-full" />
               </span>
-              con expertos
+              con experto
             </motion.h1>
 
             <motion.p

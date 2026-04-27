@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="marquee whitespace-nowrap flex gap-8 text-sm text-white/30 font-medium">
           {Array.from({ length: 2 }).map((_, setIdx) => (
             <div key={setIdx} className="flex gap-8">
-              {['+20 Años de experiencia', '+500 Proyectos completados', '100% Satisfacción garantizada', 'Presupuesto gratuito', 'Carabobo, Venezuela', 'Profesionales certificados', '+20 Años de experiencia', '+500 Proyectos completados', '100% Satisfacción garantizada', 'Presupuesto gratuito', 'Carabobo, Venezuela', 'Profesionales certificados'].map((text, i) => (
+              {['+20 Años de experiencia', '+150 Proyectos completados', '100% Satisfacción garantizada', 'Presupuesto gratuito', 'San Diego & Valencia, Carabobo', 'Profesionales certificados', '+20 Años de experiencia', '+150 Proyectos completados', '100% Satisfacción garantizada', 'Presupuesto gratuito', 'San Diego & Valencia, Carabobo', 'Profesionales certificados'].map((text, i) => (
                 <span key={i} className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 bg-brand rounded-full" />{text}
                 </span>

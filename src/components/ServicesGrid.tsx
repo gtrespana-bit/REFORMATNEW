@@ -34,17 +34,17 @@ export default function ServicesGrid() {
           {services.map((s) => (
             <Link key={s.slug} href={s.path} onMouseEnter={() => setHovered(s.slug)} onMouseLeave={() => setHovered(null)}
               className={`group relative overflow-hidden rounded-2xl transition-all duration-500 ${hovered === s.slug ? 'border-brand/30 shadow-2xl shadow-brand/10 scale-[1.02]' : 'border-white/5 hover:border-white/10'} border bg-dark-100/50 backdrop-blur-sm`}>
-              <div className="relative h-48 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent z-10" />
+              <div className="relative h-56 overflow-hidden">
                 <img src={s.heroImage} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-110" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-100 via-dark-100/60 to-transparent z-20" />
               </div>
-              <div className="relative p-6 z-20" style={{ marginTop: '-2rem' }}>
-                <div className="text-4xl mb-3">{iconMap[s.icon] || '🔧'}</div>
-                <h3 className="text-xl font-black group-hover:text-brand transition-colors mb-2">{s.title}</h3>
-                <p className="text-sm text-white/50 leading-relaxed mb-4">{s.summary}</p>
+              <div className="relative p-6 bg-gradient-to-b from-dark-100/95 to-dark-100/90 backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">{iconMap[s.icon] || '🔧'}</span>
+                  <h3 className="text-lg font-black group-hover:text-brand transition-colors">{s.title}</h3>
+                </div>
+                <p className="text-sm text-white/50 leading-relaxed mb-3">{s.shortDesc}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-white/30 font-semibold uppercase tracking-wider">{s.timeline}</span>
+                  <span className="text-[11px] text-white/30 font-semibold uppercase tracking-wider">{s.timeline}</span>
                   <span className="text-sm text-brand font-bold group-hover:text-brand-light transition-colors">{s.priceFrom}</span>
                 </div>
                 <div className="mt-4 flex items-center gap-1 text-sm text-brand font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all">
