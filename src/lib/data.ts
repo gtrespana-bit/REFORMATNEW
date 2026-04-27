@@ -13,6 +13,7 @@ export const siteConfig = {
   address: 'Venezuela',
   phone: '+58 414 123 4567',
   phoneRaw: '+584141234567',
+  phoneWa: '+584141234567',
   email: 'contacto@reformat.com',
   whatsapp: waPhone,
   schedule: 'Lun - Vie: 8am - 5pm | Sáb: 8am - 1pm',
@@ -156,12 +157,12 @@ export const galleryImages = [
 ]
 
 export const processSteps = [
-  { step: 1, title: 'Contacto Inicial', description: 'Cuéntanos tu idea por WhatsApp o formulario', icon: 'MessageCircle' },
-  { step: 2, title: 'Visita Técnica', description: 'Visitamos tu espacio y tomamos medidas', icon: 'Ruler' },
-  { step: 3, title: 'Diseño y Presupuesto', description: 'Creamos el diseño y presupuesto detallado', icon: 'Palette' },
-  { step: 4, title: 'Aprobación', description: 'Revisas, ajustamos y aprobamos juntos', icon: 'CheckCircle' },
-  { step: 5, title: 'Ejecución', description: 'Nuestro equipo ejecuta la obra con calidad', icon: 'Hammer' },
-  { step: 6, title: 'Entrega', description: 'Limpieza final y entrega de tu espacio soñado', icon: 'Home' },
+  { num: 1, title: 'Contacto Inicial', desc: 'Cuéntanos tu idea por WhatsApp o formulario', icon: 'MessageCircle' },
+  { num: 2, title: 'Visita Técnica', desc: 'Visitamos tu espacio y tomamos medidas', icon: 'Ruler' },
+  { num: 3, title: 'Diseño y Presupuesto', desc: 'Creamos el diseño y presupuesto detallado', icon: 'Palette' },
+  { num: 4, title: 'Aprobación', desc: 'Revisas, ajustamos y aprobamos juntos', icon: 'CheckCircle' },
+  { num: 5, title: 'Ejecución', desc: 'Nuestro equipo ejecuta la obra con calidad', icon: 'Hammer' },
+  { num: 6, title: 'Entrega', desc: 'Limpieza final y entrega de tu espacio soñado', icon: 'Home' },
 ]
 
 export const testimonials = [
