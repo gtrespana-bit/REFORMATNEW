@@ -44,10 +44,10 @@ export default function TestimonialsSection() {
               </div>
               <p className="text-white/60 text-sm leading-relaxed mb-6">"{t.text}"</p>
               <div className="flex items-center gap-3 pt-4 border-t border-white/5">
-                <div className="w-10 h-10 bg-gradient-to-br from-brand to-brand-dark rounded-full flex items-center justify-center text-sm font-bold">{t.initials}</div>
+                <div className="w-10 h-10 bg-gradient-to-br from-brand to-brand-dark rounded-full flex items-center justify-center text-sm font-bold">{t.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}</div>
                 <div>
                   <span className="font-semibold text-sm">{t.name}</span>
-                  <span className="block text-xs text-white/40">{t.location}</span>
+                  <span className="block text-xs text-white/40">{t.role}</span>
                 </div>
               </div>
             </motion.div>
