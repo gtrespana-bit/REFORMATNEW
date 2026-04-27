@@ -37,8 +37,9 @@ export default function Navbar() {
                 <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-lg ${pathname?.startsWith('/servicios') ? 'text-white bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'}`}>
                   Servicios <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
+                <div className="absolute top-full left-0 w-72 h-3" />
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-72 backdrop-blur-xl bg-dark-100/95 border border-white/10 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden p-2">
+                  <div className="absolute top-full left-0 w-72 backdrop-blur-xl bg-dark-100/95 border border-white/10 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden p-2 mt-[-1px]">
                     {serviceLinks.map((s) => (
                       <Link key={s.slug} href={s.path}
                         className={`flex items-center gap-3 px-4 py-3 text-sm rounded-xl transition-all ${pathname === s.path ? 'bg-brand/10 text-brand' : 'text-white/70 hover:text-white hover:bg-white/5'}`}>
@@ -51,6 +52,7 @@ export default function Navbar() {
                     ))}
                   </div>
                 )}
+              </div>
               </div>
 
               <Link href="/proceso" className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg ${pathname === '/proceso' ? 'text-white bg-white/5' : 'text-white/70 hover:text-white hover:bg-white/5'}`}>Proceso</Link>
