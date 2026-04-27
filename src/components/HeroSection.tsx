@@ -100,17 +100,16 @@ export default function HeroSection() {
               className="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] mb-6"
             >
               Transforma tus<br />
-              <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-brand via-brand-light to-gold-light">
-                <span
-                  key={wordIndex}
-                  className="block"
-                  style={{
-                    animation: 'slideUp 0.5s ease-out forwards',
-                  }}
-                >
-                  {textCycle[wordIndex]}
-                </span>
-              </span>
+              <motion.span
+                key={wordIndex}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                className="font-black"
+                style={{ background: 'linear-gradient(90deg, #DD183B, #FF2A52, #d4af37)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', }}
+              >
+                {textCycle[wordIndex]}{''}
+              </motion.span>
               con expertos
             </motion.h1>
 
