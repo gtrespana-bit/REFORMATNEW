@@ -39,7 +39,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider mb-4">Contacto</h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3"><Phone className="w-4 h-4 text-brand mt-0.5" /><a href={`tel:${siteConfig.phoneRaw}`} className="text-sm text-white/40 hover:text-white">{siteConfig.phone}</a></li>
+              <li className="flex items-start gap-3"><Phone className="w-4 h-4 text-brand mt-0.5" /><a href={`tel:${siteConfig.whatsapp}`} className="text-sm text-white/40 hover:text-white">{siteConfig.phone}</a></li>
               <li className="flex items-start gap-3"><MapPin className="w-4 h-4 text-brand mt-0.5" /><span className="text-sm text-white/40">{siteConfig.address}</span></li>
               <li className="flex items-start gap-3"><Clock className="w-4 h-4 text-brand mt-0.5" /><span className="text-sm text-white/40">{siteConfig.schedule}</span></li>
             </ul>
