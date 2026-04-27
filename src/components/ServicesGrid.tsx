@@ -45,7 +45,7 @@ export default function ServicesGrid() {
                 <p className="text-sm text-white/50 leading-relaxed mb-4">{s.summary}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-white/30 font-semibold uppercase tracking-wider">{s.timeline}</span>
-                  <span className="text-sm text-brand font-bold group-hover:text-brand-light transition-colors">{s.from}</span>
+                  <span className="text-sm text-brand font-bold group-hover:text-brand-light transition-colors">{s.priceFrom}</span>
                 </div>
                 <div className="mt-4 flex items-center gap-1 text-sm text-brand font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all">
                   Ver más <span className="transition-transform group-hover:translate-x-1">→</span>
