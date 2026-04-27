@@ -1,7 +1,11 @@
 'use client';
 
 import Spline from '@splinetool/react-spline';
-import { Cube } from 'lucide-react';
+function CubeIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21 16-9 5-9-5"/><path d="m21 8-9 5-9-5"/><path d="M12 3 3 8l9 5 9-5Z"/></svg>
+  );
+}
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -25,7 +29,7 @@ export default function Interactive3DSection() {
       >
         <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 rounded-full px-4 py-1.5 mb-4">
-            <Cube className="w-3 h-3 text-brand" />
+            <CubeIcon />
             <span className="text-xs font-semibold text-brand uppercase tracking-wider">Vista 3D Interactiva</span>
           </span>
           <h2 className="text-3xl md:text-5xl font-black mb-4">
