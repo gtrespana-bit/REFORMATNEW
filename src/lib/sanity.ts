@@ -1,6 +1,8 @@
 import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
-import type { SanityImageSource } from '@sanity/image-url'
+
+// @sanity/image-url v7+ doesn't export SanityImageSource; use a broad type
+type SanityImageSource = string | { _ref: string } | { _type: 'image'; asset: { _ref: string } }
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'u3oxom3h'
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
