@@ -11,7 +11,6 @@ import { useRef } from 'react';
 
 export default function Interactive3DSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  // @ts-expect-error - framer-motion v11 type quirk
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start end', 'end start'] });
 
   return (
