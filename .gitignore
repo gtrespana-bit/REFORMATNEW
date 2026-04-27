@@ -32,3 +32,9 @@ coverage/
 
 # Misc
 .vercel
+
+# Accidental sub-project
+sanity/reformat/
+sanity/node_modules/
+sanity/.sanity/
+sanity/package-lock.json
