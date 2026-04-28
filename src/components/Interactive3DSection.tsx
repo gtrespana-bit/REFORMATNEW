@@ -115,8 +115,8 @@ function RoomRoom({
 
 // ── Walls ──
 function Walls() {
-  const wallMat = (color = 'rgba(255,255,255,0.15)') => (
-    <meshStandardMaterial color={color} transparent opacity={0.4} />
+  const wallColor = (color = 'rgba(255,255,255,0.15)', opacity = 0.4) => (
+    <meshStandardMaterial color={color} transparent opacity={opacity} />
   );
   const W = 0.12; // wall thickness
   const H = 1.5;  // wall height
@@ -125,32 +125,38 @@ function Walls() {
     <group>
       {/* Outer walls */}
       {/* South wall */}
-      <mesh position={[0, H / 2, -4]} material={wallMat()}>
+      <mesh position={[0, H / 2, -4]}>
         <boxGeometry args={[8, H, W]} />
+        {wallColor('rgba(255,255,255,0.15)')}
       </mesh>
       {/* North wall */}
-      <mesh position={[0, H / 2, 4]} material={wallMat()}>
+      <mesh position={[0, H / 2, 4]}>
         <boxGeometry args={[8, H, W]} />
+        {wallColor('rgba(255,255,255,0.15)')}
       </mesh>
       {/* East wall */}
-      <mesh position={[4, H / 2, 0]} material={wallMat()}>
+      <mesh position={[4, H / 2, 0]}>
         <boxGeometry args={[W, H, 8]} />
+        {wallColor('rgba(255,255,255,0.15)')}
       </mesh>
       {/* West wall */}
-      <mesh position={[-4, H / 2, 0]} material={wallMat()}>
+      <mesh position={[-4, H / 2, 0]}>
         <boxGeometry args={[W, H, 8]} />
+        {wallColor('rgba(255,255,255,0.15)')}
       </mesh>
-      {/* Inner: vertical divider x=0 (kitchen/bathroom above, sala/dorm below) */}
-      <mesh position={[0, H / 2, -1.5]} material={wallMat()}>
+      {/* Inner vertical divider */}
+      <mesh position={[0, H / 2, -1.5]}>
         <boxGeometry args={[W, H, 5]} />
+        {wallColor('rgba(255,255,255,0.1)')}
       </mesh>
-      {/* Inner: horizontal divider z=0.75 (kitchen left, sala right for upper area) */}
-      {/* Actually let's do it simpler: one divider z=0 */}
-      <mesh position={[2.5, H * 0.4, 0]} material={wallMat('rgba(255,255,255,0.1)')}>
+      {/* Inner horizontal dividers */}
+      <mesh position={[2.5, H * 0.4, 0]}>
         <boxGeometry args={[3, H * 0.8, W]} />
+        {wallColor('rgba(255,255,255,0.08)', 0.25)}
       </mesh>
-      <mesh position={[-2.5, H * 0.4, 0.5]} material={wallMat('rgba(255,255,255,0.1)')}>
+      <mesh position={[-2.5, H * 0.4, 0.5]}>
         <boxGeometry args={[3, H * 0.8, W]} />
+        {wallColor('rgba(255,255,255,0.08)', 0.25)}
       </mesh>
     </group>
   );
