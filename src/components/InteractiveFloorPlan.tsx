@@ -273,19 +273,19 @@ export default function InteractiveFloorPlan({ compact = false }: { compact?: bo
   return (
     <div className={`relative rounded-2xl overflow-hidden border border-white/10 bg-[#0a0a0a] ${compact ? 'min-h-[350px] h-full' : 'h-[400px] md:h-[500px]'}`}>
       <Canvas
-        camera={{ position: [7, 6, 7], fov: 50 }}
+        camera={{ position: [0, 10, 9], fov: 50 }}
         gl={{ antialias: true }}
-        onCreated={({ gl }) => gl.setClearColor('#0a0a0a')}
+        style={{ width: '100%', height: '100%' }}
       >
         {/* Lights */}
         <ambientLight intensity={0.6} />
         <directionalLight position={[5, 10, 5]} intensity={1.2} castShadow />
         <directionalLight position={[-3, 6, -8]} intensity={0.3} color="#88aaff" />
 
-        <Float speed={0.6} rotationIntensity={0.015} floatIntensity={0.05}>
+        <Float speed={0.6} rotationIntensity={0.02} floatIntensity={0.08}>
           {/* Floor base */}
-          <mesh position={[0, -0.08, -0.9]} rotation={[-Math.PI / 2, 0, 0]}>
-            <planeGeometry args={[10, 8]} />
+          <mesh position={[0, -0.08, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+            <planeGeometry args={[12, 12]} />
             <meshStandardMaterial color="#111" />
           </mesh>
 
@@ -326,13 +326,14 @@ export default function InteractiveFloorPlan({ compact = false }: { compact?: bo
         <OrbitControls
           enablePan={false}
           enableZoom
-          minDistance={4}
-          maxDistance={16}
-          minPolarAngle={0.3}
+          minDistance={3}
+          maxDistance={20}
+          minPolarAngle={0.2}
           maxPolarAngle={Math.PI / 2.2}
           autoRotate
           autoRotateSpeed={0.6}
           makeDefault
+          target={[0, 0, -0.75]}
         />
       </Canvas>
 
