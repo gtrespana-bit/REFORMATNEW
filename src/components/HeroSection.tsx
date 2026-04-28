@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ArrowDown, MessageCircle, Award, Star, Sparkles } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { waLink, siteConfig } from '@/lib/data';
-import Spline from '@splinetool/react-spline';
+import InteractiveFloorPlan from '@/components/InteractiveFloorPlan';
 
 const textCycle = ['Cocina', 'Baño', 'Electricidad', 'Fontanería', 'Piso', 'Pintura'];
 
@@ -174,12 +174,12 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden lg:block relative"
           >
-            <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-dark-100/50 backdrop-blur-sm">
-              <Spline scene="https://prod.spline.design/6Wq1Y7YGcDFt8XqY/scene.splinecode" className="w-full h-[500px]" />
+            <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-dark-100/50 backdrop-blur-sm shadow-2xl">
+              <InteractiveFloorPlan compact />
             </div>
             <div className="absolute -bottom-4 -left-4 glass rounded-xl px-5 py-3 flex items-center gap-2">
               <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: 'linear' }} className="text-lg">🏠</motion.div>
-              <span className="text-sm font-semibold text-white">Interactivo 3D</span>
+              <span className="text-sm font-semibold text-white">Planta Interactiva 3D</span>
             </div>
           </motion.div>
         </div>
